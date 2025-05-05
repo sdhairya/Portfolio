@@ -1,13 +1,629 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/client/src/pages/Home.tsx"></script>
-    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
-    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhairya Soni - Portfolio</title>
+  <meta name="description" content="Dhairya Soni - Software Developer, Cloud Specialist, and Cybersecurity Enthusiast">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.ico">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="navbar-logo">Dhairya<span>.</span>Soni</a>
+      
+      <div class="navbar-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+      
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle mobile menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+    
+    <div id="mobile-menu" class="mobile-menu hidden">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text scroll-element">
+          <h1 class="hero-title">
+            <span>Hi, I'm</span>
+            <span class="highlight">Dhairya Soni</span>
+          </h1>
+          <h2 class="hero-subtitle">Software Developer | Cloud Specialist | Cybersecurity Enthusiast</h2>
+          <p class="hero-description">
+            I specialize in building scalable web applications, cloud solutions, and implementing secure systems.
+          </p>
+          
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+          
+          <div class="social-links">
+            <a href="mailto:sdhairya412@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/dhairya-soni-aa647a19a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-image scroll-element delay-1">
+          <div class="profile-container">
+            <div class="profile-image">
+              <img src="assets/WhatsApp Image 2025-05-04 at 22.46.39_0dce40af.jpg" alt="Dhairya Soni">
+            </div>
+            <div class="profile-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd" />
+              </svg>
+              Developer
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Get to know me better</p>
+      
+      <div class="about-content">
+        <div class="about-text scroll-element">
+          <h3 class="about-heading">Who am I?</h3>
+          <p class="about-description">
+            I am a passionate software developer with a focus on cloud technologies and cybersecurity. With a background in Information Technology and continuous learning in Cloud Architecture and Cybersecurity, I blend technical expertise with problem-solving skills to deliver robust solutions.
+          </p>
+          
+          <div class="stats-container">
+            <div class="stat-item">
+              <h4 class="stat-number">4+</h4>
+              <p class="stat-label">Years of Study</p>
+            </div>
+            <div class="stat-item">
+              <h4 class="stat-number">10+</h4>
+              <p class="stat-label">Projects</p>
+            </div>
+            <div class="stat-item">
+              <h4 class="stat-number">5+</h4>
+              <p class="stat-label">Technologies</p>
+            </div>
+          </div>
+          
+          <h3 class="about-heading">Career Goals</h3>
+          <p class="about-description">
+            I am dedicated to expanding my expertise in cloud architectures, containerization, and cybersecurity frameworks. My goal is to architect secure, scalable solutions that help organizations navigate digital transformation while maintaining robust security postures.
+          </p>
+          
+          <a href="assets/Dhairya Soni_LCL.pdf" download="Dhairya_Soni_Resume.pdf" class="resume-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download Resume
+          </a>
+        </div>
+        
+        <div class="about-images scroll-element delay-1">
+          <div class="images-grid">
+            <div class="grid-image">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80" alt="Technology">
+            </div>
+            <div class="grid-image">
+              <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80" alt="Web Development">
+            </div>
+            <div class="grid-image">
+              <img src="https://images.unsplash.com/photo-1562813733-b31f71025d54?auto=format&fit=crop&q=80" alt="Cloud Computing">
+            </div>
+            <div class="grid-image">
+              <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80" alt="Cybersecurity">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education Section -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience & Education</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">My professional journey</p>
+      
+      <div class="experience-education-container">
+        <!-- Work Experience Section -->
+        <div class="experience-section">
+          <h3 class="experience-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            Work Experience
+          </h3>
+          
+          <div class="experience-block">
+            <h4 class="job-title">Personal Shopper</h4>
+            <p class="job-company">Loblaws Bowmanville</p>
+            <p class="job-duration">May 2024 - Present</p>
+            
+            <ul class="job-duties">
+              <li>Provided excellent customer service by assisting customers with their shopping needs.</li>
+              <li>Cross trained and regularly worked in Salad Bar, Dairy, Grocery departments.</li>
+              <li>Maintained 100% accuracy in picking and loading customer orders.</li>
+              <li>Assisted customers with inquiries regarding store products and services.</li>
+            </ul>
+          </div>
+          
+          <div class="experience-block">
+            <h4 class="job-title">Software Developer Intern</h4>
+            <p class="job-company">Script All DNA Technologies</p>
+            <p class="job-duration">Dec 2022 - May 2023</p>
+            
+            <ul class="job-duties">
+              <li>Developed cross platform applications using Flutter framework with Dart programming language.</li>
+              <li>Created a real time print queue management application using Supabase database for printing.</li>
+              <li>Built server-side application for real time data processing in C#, making application 20% faster.</li>
+              <li>Integrated Google WEBRTC API for real time audio and video calling functionality.</li>
+              <li>Utilized Agile methodologies and Jira for workload management and team collaboration.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Education Section -->
+        <div class="education-section">
+          <h3 class="education-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+            Education
+          </h3>
+          
+          <div class="education-block">
+            <h4 class="degree-title">Cloud Architecture and Administration</h4>
+            <p class="school-name">Seneca Polytechnic, Toronto ON</p>
+            <p class="education-duration">Sept 2024 - April 2025</p>
+            <p class="education-description">Advanced studies in cloud infrastructure, deployment strategies, and cloud security.</p>
+          </div>
+          
+          <div class="education-block">
+            <h4 class="degree-title">Cybersecurity with Honors</h4>
+            <p class="school-name">Durham College, Oshawa, ON</p>
+            <p class="education-duration">Jan 2024 - Aug 2024</p>
+            <p class="education-description">Specialized training in security frameworks, threat detection, and vulnerability assessment.</p>
+          </div>
+          
+          <div class="education-block">
+            <h4 class="degree-title">Bachelor of Technology in Information Technology</h4>
+            <p class="school-name">Ganpat University, India</p>
+            <p class="education-duration">2019 - 2023</p>
+            <p class="education-description">Comprehensive education in software development, database management, and IT systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">What I bring to the table</p>
+      
+      <div class="skills-grid">
+        <div class="skill-column coding-skills scroll-element">
+          <h3 class="skills-column-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+            Programming Languages
+          </h3>
+          
+          <div class="skill-progress">
+            <div class="skill-name-row">
+              <span>Python</span>
+              <span>90%</span>
+            </div>
+            <div class="progress-bar-wrapper">
+              <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+          </div>
+          
+          <div class="skill-progress">
+            <div class="skill-name-row">
+              <span>Dart</span>
+              <span>85%</span>
+            </div>
+            <div class="progress-bar-wrapper">
+              <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+          </div>
+          
+          <div class="skill-progress">
+            <div class="skill-name-row">
+              <span>Java</span>
+              <span>80%</span>
+            </div>
+            <div class="progress-bar-wrapper">
+              <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+          </div>
+          
+          <div class="skill-progress">
+            <div class="skill-name-row">
+              <span>C#</span>
+              <span>75%</span>
+            </div>
+            <div class="progress-bar-wrapper">
+              <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+          </div>
+          
+          <div class="skill-progress">
+            <div class="skill-name-row">
+              <span>SQL</span>
+              <span>85%</span>
+            </div>
+            <div class="progress-bar-wrapper">
+              <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-column frameworks-skills scroll-element delay-1">
+          <h3 class="skills-column-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            Frameworks & Technologies
+          </h3>
+          
+          <div class="skill-progress">
+            <div class="skill-name-row">
+              <span>Flutter</span>
+              <span>90%</span>
+            </div>
+            <div class="progress-bar-wrapper">
+              <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+          </div>
+          
+          <div class="skill-progress">
+            <div class="skill-name-row">
+              <span>React.js</span>
+              <span>80%</span>
+            </div>
+            <div class="progress-bar-wrapper">
+              <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+          </div>
+          
+          <div class="skill-progress">
+            <div class="skill-name-row">
+              <span>REST APIs</span>
+              <span>85%</span>
+            </div>
+            <div class="progress-bar-wrapper">
+              <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+          </div>
+          
+          <div class="skill-progress">
+            <div class="skill-name-row">
+              <span>Docker</span>
+              <span>75%</span>
+            </div>
+            <div class="progress-bar-wrapper">
+              <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+          </div>
+          
+          <div class="skill-progress">
+            <div class="skill-name-row">
+              <span>Kubernetes</span>
+              <span>70%</span>
+            </div>
+            <div class="progress-bar-wrapper">
+              <div class="progress-bar" style="width: 70%;"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-column cloud-skills scroll-element">
+          <h3 class="skills-column-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg>
+            Cloud Platforms
+          </h3>
+          
+          <div class="skills-tags">
+            <div class="skill-tag">AWS</div>
+            <div class="skill-tag">Azure</div>
+            <div class="skill-tag">EKS</div>
+            <div class="skill-tag">S3</div>
+            <div class="skill-tag">ECR</div>
+          </div>
+        </div>
+        
+        <div class="skill-column devops-skills scroll-element delay-1">
+          <h3 class="skills-column-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M12 2v2"></path><path d="M12 22v-2"></path><path d="m17 20.66-1-1.73"></path><path d="M11 10.27 7 3.34"></path><path d="m20.66 17-1.73-1"></path><path d="m3.34 7 1.73 1"></path><path d="M14 12h8"></path><path d="M2 12h2"></path><path d="m20.66 7-1.73 1"></path><path d="m3.34 17 1.73-1"></path><path d="m17 3.34-1 1.73"></path><path d="m7 20.66 1-1.73"></path></svg>
+            DevOps Tools
+          </h3>
+          
+          <div class="skills-tags">
+            <div class="skill-tag">Git</div>
+            <div class="skill-tag">GitHub Actions</div>
+            <div class="skill-tag">Terraform</div>
+            <div class="skill-tag">Ansible</div>
+            <div class="skill-tag">CI/CD</div>
+          </div>
+        </div>
+        
+        <div class="skill-column soft-skills scroll-element">
+          <h3 class="skills-column-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            Soft Skills
+          </h3>
+          
+          <div class="skills-tags">
+            <div class="skill-tag">Problem Solving</div>
+            <div class="skill-tag">Team Collaboration</div>
+            <div class="skill-tag">Communication</div>
+            <div class="skill-tag">Adaptability</div>
+            <div class="skill-tag">Tech Support</div>
+          </div>
+        </div>
+      </div>
+        
+      <!-- Skills tags section hidden as we're now using the progress bars above -->
+      
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Some of my recent work</p>
+      
+      <div class="projects-grid">
+        <div class="project-card scroll-element">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1561736778-92e52a7769ef?auto=format&fit=crop&q=80" alt="Two tier web application">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Two tier web application</h3>
+            <p class="project-category">K8s cluster, AWS EKS, pod auto scaling, automation</p>
+            <div class="project-tags">
+              <span class="project-tag">Flask</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">AWS</span>
+              <span class="project-tag">Kubernetes</span>
+              <span class="project-tag">Docker</span>
+              <span class="project-tag">CI/CD</span>
+            </div>
+            <div class="project-details">
+              <ul>
+                <li>Designed and deployed a containerized Flask application backend by MySQL to a managed Kubernetes cluster (Amazon EKS), implementing persistent storage with Amazon EBS.</li>
+                <li>Automated CI/CD pipeline using GitHub Actions to build, test and push Docker images to AWS ECR on commit; integrated Kubernetes ConfigMaps and Secrets.</li>
+                <li>Enabled secure S3 access from within the app via IAM roles and secrets, dynamically loading background images from a private S3 bucket and live config update without redeployment.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card scroll-element delay-1">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?auto=format&fit=crop&q=80" alt="JobTrackr">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">JobTrackr</h3>
+            <p class="project-category">React.js, Python, MySQL, Azure</p>
+            <div class="project-tags">
+              <span class="project-tag">React.js</span>
+              <span class="project-tag">Flask</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">Azure</span>
+              <span class="project-tag">Docker</span>
+            </div>
+            <div class="project-details">
+              <ul>
+                <li>Developed a scalable full stack web app using React.js for frontend, Flask (Python) REST API for the backend, and MySQL for persistent data storage.</li>
+                <li>Containerized frontend and backend services using Docker, implemented CI/CD pipeline with GitHub Actions to automate build, test and deployment workflows.</li>
+                <li>Deployed the application on Microsoft Azure, utilizing Azure Container Registry (ACR) and Web App for Containers for high availability and cloud scalability.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card scroll-element delay-2">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80" alt="Telemedicine System">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Telemedicine System</h3>
+            <p class="project-category">Flutter, Dart, C#, SQL</p>
+            <div class="project-tags">
+              <span class="project-tag">Flutter</span>
+              <span class="project-tag">Dart</span>
+              <span class="project-tag">C#</span>
+              <span class="project-tag">SQL</span>
+              <span class="project-tag">WebRTC</span>
+            </div>
+            <div class="project-details">
+              <ul>
+                <li>Designed and developed a telemedicine platform for doctors, patients and hospitals using flutter, dart, C# and MySQL.</li>
+                <li>Incorporated audio and video calling features utilizing Google WEBRTC API.</li>
+                <li>Built server-side applications in C# for real time data processing, supported by SQL database management.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Feel free to reach out for job opportunities, collaboration, or just to say hello.</p>
+      
+      <div class="contact-container">
+        <div class="contact-info scroll-element">
+          <div class="contact-card">
+            <h3 class="contact-card-title">Contact Information</h3>
+            
+            <div class="contact-item contact-email">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <a href="mailto:sdhairya412@gmail.com">sdhairya412@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-item contact-phone">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <a href="tel:+1(437)-669-0457">+1(437)-669-0457</a>
+              </div>
+            </div>
+            
+            <div class="contact-item contact-location">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Canada</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <h3 class="contact-card-title">Follow Me</h3>
+            
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/dhairya-soni-aa647a19a/" target="_blank" rel="noopener noreferrer" class="social-icon social-linkedin" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:sdhairya412@gmail.com" class="social-icon social-email" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="tel:+1(437)-669-0457" class="social-icon social-phone" aria-label="Phone">
+                <i class="fas fa-phone-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Dhairya<span>.</span>Soni</h2>
+          <p>Software Developer | Cloud Specialist</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      
+      <div class="footer-divider"></div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">© <span id="current-year">2025</span> Dhairya Soni. All rights reserved.</p>
+        
+        <div class="footer-social">
+          <a href="mailto:sdhairya412@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/dhairya-soni-aa647a19a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="js/script.js"></script>
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Initialize scroll animations
+    document.addEventListener('DOMContentLoaded', function() {
+      const scrollElements = document.querySelectorAll('.scroll-element');
+      
+      function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.75
+        );
+      }
+      
+      function handleScrollAnimation() {
+        scrollElements.forEach((el) => {
+          if (isElementInViewport(el) && !el.classList.contains('fade-in')) {
+            el.classList.add('fade-in');
+          }
+        });
+      }
+      
+      // Initial check on page load
+      setTimeout(handleScrollAnimation, 300);
+      
+      // Check on scroll
+      window.addEventListener('scroll', handleScrollAnimation);
+    });
+  </script>
+</body>
 </html>
